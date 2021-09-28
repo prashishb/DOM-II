@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('.nav a');
 const headerImg = document.querySelector('header img');
 const body = document.querySelector('body');
 const h1 = document.querySelector('h1');
+const imgs = document.querySelectorAll('img');
 
 // mouseover event underline navLinks style
 navLinks.forEach(elem => elem.addEventListener('mouseover', () => {
@@ -51,3 +52,9 @@ window.addEventListener('contextmenu', () => {
 });
 //reset h1 text color
 window.addEventListener('click', () => h1.style.color = '');
+
+//mousedown event to hide all images
+window.addEventListener('mousedown', () => imgs.forEach(elem => elem.style.visibility = 'hidden'));
+
+//mouseup event to show all images
+window.addEventListener('mouseup', () => imgs.forEach(elem => elem.style.visibility = 'visible'));
