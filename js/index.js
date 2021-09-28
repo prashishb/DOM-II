@@ -1,8 +1,9 @@
 // Your code goes here
 
 const navLinks = document.querySelectorAll('.nav a');
-let headerImg = document.querySelector('header img');
+const headerImg = document.querySelector('header img');
 const body = document.querySelector('body');
+const h1 = document.querySelector('h1');
 
 // mouseover event underline navLinks style
 navLinks.forEach(elem => elem.addEventListener('mouseover', () => {
@@ -41,3 +42,12 @@ document.addEventListener('scroll', () => {
         document.querySelector('.main-navigation').style.background = '#FFFFFF';
     }
 })
+
+//right click event change h1 text color
+window.addEventListener('contextmenu', () => {
+    if (h1.style.color === '') {
+        h1.style.color = '#f44336';
+    }
+});
+//reset h1 text color
+window.addEventListener('click', () => h1.style.color = '');
