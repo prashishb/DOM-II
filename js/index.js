@@ -5,6 +5,8 @@ const headerImg = document.querySelector('header img');
 const body = document.querySelector('body');
 const h1 = document.querySelector('h1');
 const imgs = document.querySelectorAll('.img-content');
+const contentSection = document.querySelector('.content-section');
+const contentText = document.querySelector('.text-content');
 
 // mouseover event underline navLinks style
 navLinks.forEach(elem => elem.addEventListener('mouseover', () => {
@@ -54,10 +56,19 @@ window.addEventListener('contextmenu', () => {
 window.addEventListener('click', () => h1.style.color = '');
 
 //mousedown event to hide content images
-window.addEventListener('mousedown', () => imgs.forEach(elem => elem.style.visibility = 'hidden'));
+window.addEventListener('pointerdown', () => imgs.forEach(elem => elem.style.visibility = 'hidden'));
 
 //mouseup event to show content images
-window.addEventListener('mouseup', () => imgs.forEach(elem => elem.style.visibility = 'visible'));
+window.addEventListener('pointerup', () => imgs.forEach(elem => elem.style.visibility = 'visible'));
 
 //resize event alert
 window.addEventListener('resize', () => alert('window resized!!!!'));
+
+//stopPropagation
+contentText.addEventListener('click', (event) => {
+    alert('clicked Text Section');
+    event.stopPropagation();
+});
+
+contentSection.addEventListener('click', () => alert('clicked section content'));
+
