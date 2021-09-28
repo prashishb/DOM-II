@@ -49,17 +49,17 @@ document.addEventListener('scroll', () => {
 //right click event change h1 text color
 window.addEventListener('contextmenu', () => {
     if (h1.style.color === '') {
-        h1.style.color = '#f44336';
+        h1.style.color = '#17A2B8';
     }
 });
 //reset h1 text color
 window.addEventListener('click', () => h1.style.color = '');
 
 //mousedown event to hide content images
-window.addEventListener('pointerdown', () => imgs.forEach(elem => elem.style.visibility = 'hidden'));
+window.addEventListener('mousedown', () => imgs.forEach(elem => elem.style.visibility = 'hidden'));
 
 //mouseup event to show content images
-window.addEventListener('pointerup', () => imgs.forEach(elem => elem.style.visibility = 'visible'));
+window.addEventListener('mouseup', () => imgs.forEach(elem => elem.style.visibility = 'visible'));
 
 //resize event alert
 window.addEventListener('resize', () => alert('window resized!!!!'));
