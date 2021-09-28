@@ -72,3 +72,5 @@ contentText.addEventListener('click', (event) => {
 
 contentSection.addEventListener('click', () => alert('clicked section content'));
 
+//stop nav links from refreshing page
+navLinks.forEach(elem => elem.addEventListener('click', (event) => event.preventDefault()));
